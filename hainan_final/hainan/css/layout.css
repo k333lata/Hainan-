@@ -51,7 +51,7 @@
   background: var(--surface);
 }
 
-/* Home hero (index) */
+
 .hero.hero-home{
   position: relative;
   min-height: 85vh;
@@ -112,7 +112,7 @@
   margin-bottom: 10px;
 }
 
-/* Places page sections (full-screen backgrounds) */
+
 .place{
   min-height: 100vh;
   display: grid;
@@ -140,7 +140,7 @@
 .place-park{ background-image: url("../images/romance-park.jpg"); }
 .place-jungle{ background-image: url("../images/yanoda-jungle.jpg"); }
 
-/* so anchor jumps don't hide behind sticky header */
+
 .place{ scroll-margin-top: 90px; }
 
 .site-footer{
