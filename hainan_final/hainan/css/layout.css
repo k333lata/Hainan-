@@ -1,0 +1,176 @@
+
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.brand{
+  display: grid;
+  gap: 2px;
+}
+
+.brand-title{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+.brand-sub{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.nav{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.main{
+  padding: 28px 0 54px;
+}
+
+.hero{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+/* Home hero (index) */
+.hero.hero-home{
+  position: relative;
+  min-height: 85vh;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: url("../images/maybe5.jpg") center / cover no-repeat;
+}
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+}
+
+.hero-description{
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  max-width: min(520px, calc(100% - 36px));
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+}
+
+.hero-media{
+  min-height: 260px;
+  background: linear-gradient(135deg, rgba(191,194,203,0.7), rgba(211,197,188,0.7));
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content{
+  padding: 18px;
+}
+
+.grid{
+  display: grid;
+  gap: 14px;
+}
+
+.grid-3{
+  grid-template-columns: 1fr;
+}
+
+.section{
+  margin-top: 22px;
+}
+
+.section-title{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Places page sections (full-screen backgrounds) */
+.place{
+  min-height: 100vh;
+  display: grid;
+  align-items: end;
+  padding: 28px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.place-content{
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+}
+
+.place-content h2{ margin: 0 0 10px; }
+.place-content p{ margin: 0; }
+
+.place-buddha{ background-image: url("../images/czentr-buddizma-nanshan.jpg"); }
+.place-monkey{ background-image: url("../images/monkey-ostrov.jpg"); }
+.place-park{ background-image: url("../images/romance-park.jpg"); }
+.place-jungle{ background-image: url("../images/yanoda-jungle.jpg"); }
+
+/* so anchor jumps don't hide behind sticky header */
+.place{ scroll-margin-top: 90px; }
+
+.site-footer{
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+  background: rgba(217, 220, 227, 0.15);
+}
+
+/* tablet */
+@media (min-width: 720px){
+  .hero{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .hero-media{
+    min-height: 360px;
+  }
+  .hero-content{
+    padding: 26px;
+    display: grid;
+    align-content: center;
+  }
+  .grid-3{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px){
+  .main{
+    padding: 34px 0 64px;
+  }
+}
